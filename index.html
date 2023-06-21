@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-<link rel="stylesheet" href="./stuff/index.css">
-</head>
-<body>
-    
-    <h1>Masai Employee Records</h1>
+    <link rel="stylesheet" href="./stuff/index.css" />
+  </head>
+  <body>
+    <h1>DaveAi Employee Records</h1>
 
     <div>
       <!-- ***** We are using form here  ****  -->
-      <form>
+      <form id="employeedata" >
         <label for="">First name</label><br />
-        <input id="firstname" type="text" placeholder="Enter Your First Name" /><br />
+        <input
+          id="firstname"
+          type="text"
+          placeholder="Enter Your First Name"
+        /><br />
         <label for="">Last name</label><br />
         <input
           id="lastname"
@@ -23,28 +26,33 @@
           placeholder="Enter Your Last Name"
         /><br />
         <label for="">Date of birth </label><br />
-        <input type="datetime"/>
+        <input type="date" id="birthdate" placeholder="Enter Your Birth Date" />
         <br />
-        <label for="">Experience </label><br />
-        <input id="exp" type="number" placeholder="Experience in Years" /><br />
         <label for="">Email Address </label><br />
         <input type="text" id="email" placeholder="Enter Email Address" /><br />
         <label for="">Mobile Number </label><br />
-        <input id="mbl" type="number" placeholder="Enter Mobile number" /><br />
+        <input id="mbl" type="number" placeholder="Enter Mobile Number" /><br />
+        <label for="">City </label><br />
+        <input id="city" type="text" placeholder="Enter Your City" /><br />
+        <label for="">Pincode </label><br />
+        <input
+          id="pincode"
+          type="text"
+          placeholder="Enter Your Pincode"
+        /><br />
         <input type="submit" />
       </form>
       <table>
         <!-- Dont change order of columns -->
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Employee ID</th>
-            <th>Department</th>
-            <th>Experience in years</th>
-            <th>Email address</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Date of Birth</th>
+            <th>Email Address</th>
             <th>Mobile Number</th>
-            <th>Role</th>
-            <th>Delete</th>
+            <th>City</th>
+            <th>Pincode</th>
           </tr>
         </thead>
         <tbody>
@@ -52,9 +60,6 @@
         </tbody>
       </table>
     </div>
-
-
-
-</body>
-<script src="./stuff/index.js"></script>
+  </body>
+  <script src="./stuff/index.js"></script>
 </html>
