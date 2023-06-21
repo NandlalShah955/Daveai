@@ -24,6 +24,12 @@ function table(event) {
     pincode
   );
 
+  // var validateError = {};
+  // const naamvalidation = /^[a-zA-Z]*$/;
+  // const televalidation = /^\d{10}$/;
+  // const emailvalidation = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/;
+
+
   formdata.push(datafromconstruct);
   localStorage.setItem("data", JSON.stringify(formdata));
 }
@@ -72,4 +78,9 @@ const append = (formdata) => {
   });
 };
 
+// Called that append function here 
 append(formdata);
+
+
+
+
