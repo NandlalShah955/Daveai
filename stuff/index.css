@@ -21,6 +21,7 @@ h1 {
     margin: 0 auto;
     margin-top: 50px;
     width: 30%;
+    height: 700px;
      box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     padding: 30px;
    
@@ -32,7 +33,7 @@ h1 {
     grid-template-rows: repeat(4, 400px);
     margin-top: 10px;
     gap: 20px;
-    height: auto;
+    height: 1000px;
   }
   .box{
     width: 300px;
@@ -52,6 +53,7 @@ h1 {
   input[type="number"],
   input[type="date"],
   select,
+ 
   textarea {
     border: 1px solid #ccc;
     width: 100%;
@@ -61,6 +63,15 @@ h1 {
     box-sizing: border-box;
     padding: 12px;
     
+  }
+  #sort,#search{
+    border: 1px solid #ccc;
+    width: 10%;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 12px;
   }
   input[type="submit"] {
      width: 100%;

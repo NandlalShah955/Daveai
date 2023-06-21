@@ -10,14 +10,20 @@
   <body>
     <h1>DaveAi Employee Records</h1>
 
+   
+   <!-- Select tag for the sorting thing  -->
+    <select id="sort">
+      <option value="">Sort by birthdate</option>
+      <option value="Ascending">Low to high</option>
+      <option value="Descending">High to low</option>
+    </select>
 
-<select id="sort"></select>
-
-
+    <!-- input for searching any user -->
+    <input type="text" id="search" placeholder="Search User here" />
 
     <div id="maindiv">
       <!-- ***** We are using form here  ****  -->
-      <form id="employeedata" >
+      <form id="employeedata">
         <label for="">First name</label><br />
         <input
           id="firstname"
@@ -47,14 +53,10 @@
         /><br />
         <input type="submit" />
       </form>
-      
-      
-      
-     <div id="all_products">
 
+      <div id="all_products">
         <!-- All Cards to be appended here  -->
-
-     </div>
+      </div>
     </div>
   </body>
   <script src="./stuff/index.js"></script>
