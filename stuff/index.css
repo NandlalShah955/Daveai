@@ -5,7 +5,7 @@ h1 {
   text-transform: uppercase;
    text-decoration: underline;
   }
-  div {
+  #maindiv{
     display: flex;
     justify-content: space-evenly;
    
@@ -16,14 +16,7 @@ h1 {
     
   }
   
-  table {
-    margin: auto;
-    width: 60%;
-    margin-top: 50px;
-    text-align: center;
-   
-   
-  }
+  
   form {
     margin: 0 auto;
     margin-top: 50px;
@@ -33,31 +26,28 @@ h1 {
    
   }
   
-  
-  table td,
-  table th {
-    border: 1px solid rgb(208, 200, 200);
-    padding: 8px;
+  #all_products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 400px);
+    margin-top: 10px;
+    gap: 20px;
+    height: auto;
+  }
+  .box{
+    width: 300px;
+    height: auto;
+    background-color: #75b2db;
+    border-radius: 10px;
+    padding: 20px;
+    color: #fff;
     text-align: center;
-  }
-  
-  table tr:nth-child(even) {
-    background-color: #6f87a4;
-  }
-  
-  table tr:hover {
-    background-color: rgb(208, 200, 200);
-  }
-  
-  table th {
-    text-align: center;
-    text-align: left;
-    background-color: #0468aa;
-    color: white;
-    padding-top: 12px;
-    padding-bottom: 12px;
-   
-  }
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      }
+      .box>img{
+          height: 40%;
+          width: 100%;
+      }
   input[type="text"],
   input[type="number"],
   input[type="date"],
