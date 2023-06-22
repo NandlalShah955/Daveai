@@ -4,6 +4,10 @@ document.getElementById("employeedata").addEventListener("submit", table);
 function table(event) {
   event.preventDefault();
 
+setTimeout(() => {
+  alert("please refresh page once if data entered is correct")
+  
+}, 2000);
 
 
   let form = document.getElementById("employeedata");
@@ -90,7 +94,7 @@ function table(event) {
   }
   if (datafromconstruct.mobile.length!=10) {
     document.getElementById("phone").innerHTML =
-      "**Please fill the mobile number";
+      "**Mobile number must be at least 10 characters";
     return false;
   }
 
