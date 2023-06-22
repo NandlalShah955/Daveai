@@ -22,6 +22,8 @@ function table(event) {
     city,
     pincode
   );
+
+  // Validation for the first name
   if (datafromconstruct.firstname == "") {
     document.getElementById("username").innerHTML =
       "Please fill the first name";
@@ -39,11 +41,14 @@ function table(event) {
     return false;
   }
 
+
+
   if (datafromconstruct.lastname == "") {
     document.getElementById("usernamelast").innerHTML =
       "**Please fill the last name";
     return false;
   }
+
 
   if (datafromconstruct.birthdate == "") {
     document.getElementById("birth").innerHTML = "**Please fill the birthdate ";
@@ -52,7 +57,7 @@ function table(event) {
   
   
   
-  
+   // Validation for the Email
   if (datafromconstruct.email == "") {
     document.getElementById("emailed").innerHTML = "**Please fill the email";
     return false;
@@ -69,6 +74,8 @@ function table(event) {
     return false;
   }
 
+// Validation for the mobile number 
+
   if (datafromconstruct.mobile == "") {
     document.getElementById("phone").innerHTML =
       "**Please fill the mobile number";
@@ -84,6 +91,7 @@ function table(event) {
       "**Please fill the mobile number";
     return false;
   }
+
 
   if (datafromconstruct.city == "") {
     document.getElementById("shehr").innerHTML = "Please fill the city";
@@ -141,4 +149,20 @@ const append = (formdata) => {
 };
 
 // Called that append function here
+
 append(formdata);
+
+// Searching part of the Table 
+const handleclick=()=>{
+  let val=  document.getElementById("search").value
+ 
+  console.log(formdata)
+  var nayaformdata=formdata.filter(function(elem){
+    return elem.firstname.toLowerCase().includes(val)
+    
+   
+  })
+ 
+  append(nayaformdata)
+
+}
