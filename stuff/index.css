@@ -26,6 +26,9 @@ h1 {
     padding: 30px;
    
   }
+  #username,#usernamelast,#birth,#emailed,#phone,#shehr,#pin{
+    color: red;
+  }
   
   #all_products {
     display: grid;

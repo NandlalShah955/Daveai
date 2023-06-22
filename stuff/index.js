@@ -5,7 +5,7 @@ function table(event) {
   event.preventDefault();
   window.location.reload();
   let form = document.getElementById("employeedata");
-let firstname = form.firstname.value;
+  let firstname = form.firstname.value;
   let lastname = form.lastname.value;
   let birthdate = form.birthdate.value;
   let email = form.email.value;
@@ -22,12 +22,81 @@ let firstname = form.firstname.value;
     city,
     pincode
   );
-var validateError = {};
-  const naamvalidation = /^[a-zA-Z]*$/;
-  const televalidation = /^\d{10}$/;
-  const emailvalidation = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/;
- formdata.push(datafromconstruct);
+  if (datafromconstruct.firstname == "") {
+    document.getElementById("username").innerHTML =
+      "Please fill the first name";
+    return false;
+  }
+  if (datafromconstruct.firstname <= 2 || datafromconstruct.firstname > 20) {
+    document.getElementById("username").innerHTML =
+      "**Firstname should be between 2 and 20";
+    return false;
+  }
+
+  if (!isNaN(datafromconstruct.firstname)) {
+    document.getElementById("username").innerHTML =
+      "** only characters are allowed";
+    return false;
+  }
+
+  if (datafromconstruct.lastname == "") {
+    document.getElementById("usernamelast").innerHTML =
+      "**Please fill the last name";
+    return false;
+  }
+
+  if (datafromconstruct.birthdate == "") {
+    document.getElementById("birth").innerHTML = "**Please fill the birthdate ";
+    return false;
+  }
+  
+  
+  
+  
+  if (datafromconstruct.email == "") {
+    document.getElementById("emailed").innerHTML = "**Please fill the email";
+    return false;
+  }
+  if (datafromconstruct.email.indexOf("@") <= 0) {
+    document.getElementById("emailed").innerHTML = "**Invalid postition";
+    return false;
+  }
+  if (
+    datafromconstruct.email.charAt(datafromconstruct.email.length - 4) != "." &&
+    datafromconstruct.email.charAt(datafromconstruct.email.length - 3) != "."
+  ) {
+    document.getElementById("emailed").innerHTML = "**Invalid postition";
+    return false;
+  }
+
+  if (datafromconstruct.mobile == "") {
+    document.getElementById("phone").innerHTML =
+      "**Please fill the mobile number";
+    return false;
+  }
+  if (isNaN(datafromconstruct.mobile)) {
+    document.getElementById("phone").innerHTML =
+      "**User must write only digits";
+    return false;
+  }
+  if (datafromconstruct.mobile.length!=10) {
+    document.getElementById("phone").innerHTML =
+      "**Please fill the mobile number";
+    return false;
+  }
+
+  if (datafromconstruct.city == "") {
+    document.getElementById("shehr").innerHTML = "Please fill the city";
+    return false;
+  }
+  if (datafromconstruct.pincode == "") {
+    document.getElementById("pin").innerHTML = "Please fill the pincode ";
+    return false;
+  }
+
+  formdata.push(datafromconstruct);
   localStorage.setItem("data", JSON.stringify(formdata));
+  console.log(datafromconstruct);
 }
 function construct(f, l, b, e, m, c, p) {
   this.firstname = f;
@@ -71,9 +140,5 @@ const append = (formdata) => {
   });
 };
 
-// Called that append function here 
+// Called that append function here
 append(formdata);
-
-
-
-

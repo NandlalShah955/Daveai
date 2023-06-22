@@ -10,8 +10,7 @@
   <body>
     <h1>DaveAi Employee Records</h1>
 
-   
-   <!-- Select tag for the sorting thing  -->
+    <!-- Select tag for the sorting thing  -->
     <select id="sort">
       <option value="">Sort by birthdate</option>
       <option value="Ascending">Low to high</option>
@@ -29,28 +28,81 @@
           id="firstname"
           type="text"
           placeholder="Enter Your First Name"
-        /><br />
+          autocomplete="off"
+        />
+        <span id="username"></span>
+        <br />
+
         <label for="">Last name</label><br />
-        <input
-          id="lastname"
-          type="text"
-          placeholder="Enter Your Last Name"
-        /><br />
+        <input id="lastname" type="text" placeholder="Enter Your Last Name" />
+        <span id="usernamelast"></span>
+        <br />
+
         <label for="">Date of birth </label><br />
         <input type="date" id="birthdate" placeholder="Enter Your Birth Date" />
+        <span id="birth"></span>
         <br />
+
         <label for="">Email Address </label><br />
-        <input type="text" id="email" placeholder="Enter Email Address" /><br />
+        <input type="text" id="email" placeholder="Enter Email Address" />
+        <span id="emailed"></span>
+        <br />
+
         <label for="">Mobile Number </label><br />
-        <input id="mbl" type="number" placeholder="Enter Mobile Number" /><br />
+        <input id="mbl" type="number" placeholder="Enter Mobile Number" />
+        <span id="phone"></span>
+        <br />
+
         <label for="">City </label><br />
-        <input id="city" type="text" placeholder="Enter Your City" /><br />
+
+        <select id="city">
+          <option value="" selected disabled>Select State</option>
+          <option value="Andhra Pradesh">Andhra Pradesh</option>
+          <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+          <option value="Assam">Assam</option>
+          <option value="Bihar">Bihar</option>
+          <option value="Chhattisgarh">Chhattisgarh</option>
+          <option value="Goa">Goa</option>
+          <option value="Gujarat">Gujarat</option>
+          <option value="Haryana">Haryana</option>
+          <option value="Himachal Pradesh">Himachal Pradesh</option>
+          <option value="Jharkhand">Jharkhand</option>
+          <option value="Karnataka">Karnataka</option>
+          <option value="Kerala">Kerala</option>
+          <option value="Madhya Pradesh">Madhya Pradesh</option>
+          <option value="Maharashtra">Maharashtra</option>
+          <option value="Manipur">Manipur</option>
+          <option value="Meghalaya">Meghalaya</option>
+          <option value="Mizoram">Mizoram</option>
+          <option value="Nagaland">Nagaland</option>
+          <option value="Odisha">Odisha</option>
+          <option value="Punjab">Punjab</option>
+          <option value="Rajasthan">Rajasthan</option>
+          <option value="Sikkim">Sikkim</option>
+          <option value="Tamil Nadu">Tamil Nadu</option>
+          <option value="Telangana">Telangana</option>
+          <option value="Tripura">Tripura</option>
+          <option value="Uttar Pradesh">Uttar Pradesh</option>
+          <option value="Uttarakhand">Uttarakhand</option>
+          <option value="West Bengal">West Bengal</option>
+          <option value="Andaman and Nicobar Islands">
+            Andaman and Nicobar Islands
+          </option>
+          <option value="Chandigarh">Chandigarh</option>
+          <option value="Dadra and Nagar Haveli and Daman and Diu">
+            Dadra and Nagar Haveli and Daman and Diu
+          </option>
+          <option value="Delhi">Delhi</option>
+          <option value="Lakshadweep">Lakshadweep</option>
+          <option value="Puducherry">Puducherry</option>
+        </select>
+
+        <span id="shehr"></span>
+
+        <br />
         <label for="">Pincode </label><br />
-        <input
-          id="pincode"
-          type="text"
-          placeholder="Enter Your Pincode"
-        /><br />
+        <input id="pincode" type="text" placeholder="Enter Your Pincode" />
+        <br />
         <input type="submit" />
       </form>
 
