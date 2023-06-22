@@ -11,7 +11,7 @@
     <h1>DaveAi Employee Records</h1>
 
     <!-- Select tag for the sorting thing  -->
-    <select id="sort">
+    <select id="sort" onchange="handlesort()">
       <option value="">Sort by birthdate</option>
       <option value="Ascending">Low to high</option>
       <option value="Descending">High to low</option>
@@ -19,7 +19,7 @@
 
     <!-- input for searching any user -->
     <input type="text" id="search" placeholder="Search User here" />
-    <button onclick="handleclick()"> Search</button>
+    <button onclick="handleclick()" id="btn"> Search</button>
 
     <div id="maindiv">
       <!-- ***** We are using form here  ****  -->

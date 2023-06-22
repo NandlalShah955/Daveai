@@ -3,7 +3,9 @@ let formdata = JSON.parse(localStorage.getItem("data")) || [];
 document.getElementById("employeedata").addEventListener("submit", table);
 function table(event) {
   event.preventDefault();
-  window.location.reload();
+
+
+
   let form = document.getElementById("employeedata");
   let firstname = form.firstname.value;
   let lastname = form.lastname.value;
@@ -164,5 +166,30 @@ const handleclick=()=>{
   })
  
   append(nayaformdata)
+
+}
+
+// Sorting Part 
+const handlesort=()=>{
+  let handle=document.getElementById("sort").value;
+
+if(handle=="Ascending"){
+var sortedDate=formdata.sort(function(a,b){
+return new Date(a.birthdate)-new Date(b.birthdate);
+
+})
+append(sortedDate)
+
+
+}else if(handle=="Descending"){
+  var sortedDate=formdata.sort(function(a,b){
+    return new Date(b.birthdate)-new Date(a.birthdate);
+    
+    })
+    append(sortedDate)
+  
+}
+
+
 
 }
